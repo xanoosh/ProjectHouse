@@ -1,0 +1,76 @@
+$heroColor: #fff;
+$siteColor: #000;
+$siteColor2: #eee;
+
+
+%img{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero{
+    background-image: url("../img/hero_house.jpg");
+    @extend %img;
+    height: 40rem; //do wywalenia
+    color: $heroColor;
+}
+
+.houses-section{
+    background-color: $siteColor2;
+    .container{
+        .card{
+        border: none;
+        box-shadow: 0 4rem 3rem -1rem gray;
+    }
+}
+}
+
+.card{
+    border: none;
+    h1{
+        color: darkblue;
+        opacity: .5;
+        &:first-child{
+            opacity: 1;
+        }
+    }
+}
+
+.hrBlue{
+    background-color: darkblue;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    width: 7rem;
+    height: .2rem;
+}
+
+
+.quote{
+    text-align: center;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.round-1{
+    @extend %img;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    background-image: url("../img/house_round_2.jpg")
+}
+
+.round-2{
+    @extend %img;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    background-image: url("../img/house_round_1.jpg")
+}
+
+.round-3{
+    @extend %img;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    background-image: url("../img/house_round_3.jpg")
+}
