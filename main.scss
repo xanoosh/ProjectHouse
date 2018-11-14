@@ -1,26 +1,29 @@
 $heroColor: #fff;
 $siteColor: #000;
-$siteColor2: #eee;
-
+$siteColor2: #f6f9ff;
 
 %img{
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
 .hero{
     background-image: url("../img/hero_house.jpg");
     @extend %img;
-    height: 40rem; //do wywalenia
+    height: 40rem; //do zmiany
     color: $heroColor;
 }
 
-.houses-section{
+.color-section{
     background-color: $siteColor2;
     .container{
         .card{
         border: none;
-        box-shadow: 0 4rem 3rem -1rem gray;
+        box-shadow: 0 3rem 2rem -1rem lightgrey;
     }
 }
 }
@@ -56,7 +59,7 @@ $siteColor2: #eee;
     border-radius: 50%;
     width: 7rem;
     height: 7rem;
-    background-image: url("../img/house_round_2.jpg")
+    background-image: url("../img/house_round_1.jpg");
 }
 
 .round-2{
@@ -64,7 +67,7 @@ $siteColor2: #eee;
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
-    background-image: url("../img/house_round_1.jpg")
+    background-image: url("../img/house_round_2.jpg");
 }
 
 .round-3{
@@ -72,5 +75,26 @@ $siteColor2: #eee;
     border-radius: 50%;
     width: 7rem;
     height: 7rem;
-    background-image: url("../img/house_round_3.jpg")
+    background-image: url("../img/house_round_3.jpg");
+}
+
+.news-card{
+    min-height: 28rem;
+}
+
+footer a {
+    color: #000;
+    opacity: .7;
+    &:hover{
+        color: #000;
+        opacity: 1;
+    }
+}
+
+.navbar-light{
+    a{
+        &:first-child{
+            font-weight: bold;
+        }
+    }
 }
