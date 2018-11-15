@@ -1,6 +1,6 @@
 $heroColor: #fff;
 $siteColor: #000;
-$siteColor2: #f6f9ff;
+$siteColor2: #e5e8ee;
 
 %img{
     background-repeat: no-repeat;
@@ -18,26 +18,57 @@ $siteColor2: #f6f9ff;
     color: $heroColor;
 }
 
-.color-section{
+
+.section{
+    @media (max-width: 768px){
+        padding: 2rem 0;
+    };
+    @media (min-width: 768px){
+        padding: 7rem 0;  
+    };
+};
+
+.lightblue{
     background-color: $siteColor2;
-    .container{
-        .card{
-        border: none;
-        box-shadow: 0 3rem 2rem -1rem lightgrey;
-    }
-}
 }
 
 .card{
     border: none;
-    h1{
+    box-shadow: 0 2.5rem 1.5rem -2rem lightgrey;
+    @media (max-width: 768px){
+        box-shadow: none
+    };
+}
+
+%arrow{
+    border: solid;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+    .arrow-right {
+        @extend %arrow;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);  
+    }
+        .arrow-down{
+            @extend %arrow;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+
+
+    .display-2{
         color: darkblue;
         opacity: .5;
         &:first-child{
             opacity: 1;
         }
     }
-}
+
+    
+
 
 .hrBlue{
     background-color: darkblue;
@@ -47,48 +78,93 @@ $siteColor2: #f6f9ff;
     height: .2rem;
 }
 
+.relative-col{
+    @media (max-width: 767.98px){
+        min-height: 28rem
+    };
+    .round-1{
+        @extend %img;
+        border-radius: 50%;
+        width: 7rem;
+        height: 7rem;
+        background-image: url("../img/house_round_1.jpg");
+        top: 30%;
+        right: 40%;
+        @media (max-width: 575.98px){
+            top: 0%;
+            right: 50%;
+        };
+        @media (min-width:576px) and (max-width: 767.98px){
+            top: 10%;
+            right: 50%;
+        };
+        @media (min-width: 768px) and (max-width: 991.98px){
+        };
+    }
 
-.quote{
-    text-align: center;
-    margin: 0 auto;
-    padding: 4rem;
+    .round-2{
+        @extend %img;
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+        background-image: url("../img/house_round_2.jpg");
+        top: 155%;
+        right: 20%;
+        @media (max-width: 575.98px){
+            top: 25%;
+            right: 15%;
+        };
+        @media (min-width: 576px) and (max-width: 767.98px){
+            top: 30%;
+            right: 25%;
+        };
+        @media (min-width: 768px) and (max-width: 991.98px){
+        };
+    }
+    
+    .round-3{
+        @extend %img;
+        border-radius: 50%;
+        width: 7rem;
+        height: 7rem;
+        background-image: url("../img/house_round_3.jpg");
+        top: 250%;
+        right: 52%;
+
+        @media (max-width: 575.98px){
+            top: 60%;
+            right: 50%;
+        };
+        @media (min-width: 576px) and (max-width: 767.98px){
+            top: 60%;
+            right: 50%;
+        };
+        @media (min-width: 768px) and (max-width: 991.98px){
+            top: 280%;
+            right: 60%;
+        };
+    }
 }
 
-.round-1{
-    @extend %img;
-    border-radius: 50%;
-    width: 7rem;
-    height: 7rem;
-    background-image: url("../img/house_round_1.jpg");
-}
 
-.round-2{
-    @extend %img;
-    border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
-    background-image: url("../img/house_round_2.jpg");
-}
-
-.round-3{
-    @extend %img;
-    border-radius: 50%;
-    width: 7rem;
-    height: 7rem;
-    background-image: url("../img/house_round_3.jpg");
-}
 
 .news-card{
     min-height: 28rem;
 }
 
-footer a {
-    color: #000;
+footer{
+    a{
+    color: $siteColor;
     opacity: .7;
-    &:hover{
-        color: #000;
+        &:hover{
+        color: $siteColor;
         opacity: 1;
     }
+    }
+    p{
+        color: #777;
+    }
+    
 }
 
 .navbar-light{
